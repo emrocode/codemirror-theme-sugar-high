@@ -24,7 +24,8 @@ npm install @emrocode/codemirror-theme-sugar-high
 ## Usage
 
 ```tsx
-import { EditorView } from '@codemirror/view';
+import CodeMirror from '@uiw/react-codemirror';
+import { javascript } from '@codemirror/lang-javascript';
 import { taffyLight } from '@emrocode/codemirror-theme-sugar-high';
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
     <CodeMirror
       value="console.log('hello');"
       theme={taffyLight}
+      extensions={[javascript({ jsx: true })]}
     />
   );
 }
