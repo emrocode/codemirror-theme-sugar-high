@@ -30,6 +30,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "name": "@emrocode/codemirror-theme-sugar-high",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emrocode/codemirror-theme-sugar-high.git"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --out-dir dist",
     "check": "biome check --write .",
