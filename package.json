@@ -1,0 +1,42 @@
+{
+  "author": "Emilio Romero <npm@emroco.de>",
+  "dependencies": {
+    "@lezer/highlight": "^1.2.3",
+    "@uiw/codemirror-themes": "^4.25.11"
+  },
+  "description": "CodeMirror themes ported from Sugar High.",
+  "devDependencies": {
+    "@biomejs/biome": "2.5.12",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.3"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "codemirror",
+    "codemirror-theme",
+    "syntax-highlighting"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "name": "@emrocode/codemirror-theme-sugar-high",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --out-dir dist",
+    "check": "biome check --write .",
+    "format": "biome format --write .",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "./dist/index.d.ts",
+  "version": "1.0.0"
+}
